@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step01
-          if: github.event.action == 'merged'
-          run: yarn env
+        if: github.event.action == 'merged'
+        run: yarn env
