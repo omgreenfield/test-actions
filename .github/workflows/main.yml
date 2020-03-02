@@ -4,12 +4,14 @@ on:
   pull_request:
     branches:
       - master
+  push:
 
 jobs:
   test_master_merge:
     name: Test master merge
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: step01
         if: github.event.action == 'merged'
         run: yarn env
