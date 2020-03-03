@@ -15,9 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: step01
-        # if: github.event.action == 'merged'
+        if: github.event.action == 'merged'
         run: |
           echo test123
           yarn env
           echo ${{ secrets.SOME_SECRET }}
  
+# some change
