@@ -13,6 +13,8 @@ jobs:
     name: Test master merge
     runs-on: ubuntu-latest
     steps:
+      - name: Just echo some shit
+        run: echo some shit
       - uses: actions/checkout@v2
         if: github.event.action == 'merged'
       - name: step01
