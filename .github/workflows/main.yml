@@ -1,6 +1,9 @@
 name: CI
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
     branches:
       - test_actions
@@ -18,4 +21,3 @@ jobs:
           yarn env
           echo ${{ secrets.SOME_SECRET }}
  
-   
