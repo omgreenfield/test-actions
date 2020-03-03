@@ -15,6 +15,7 @@ jobs:
       - name: step01
         # if: github.event.action == 'merged'
         run: |
+          echo test123
           yarn env
           echo ${{ secrets.SOME_SECRET }}
  
