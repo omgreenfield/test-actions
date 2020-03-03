@@ -1,10 +1,9 @@
 name: CI
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
+    branches:
+      - test_actions
 
 jobs:
   test_master_merge:
@@ -17,5 +16,5 @@ jobs:
         run: |
           echo test123
           yarn env
-          echo dafuq ${{ secrets.SOME_SECRET }} dafuq
+          echo ${{ secrets.SOME_SECRET }}
  
