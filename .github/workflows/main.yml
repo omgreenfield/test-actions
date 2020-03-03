@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        if: github.event.action == 'merged'
       - name: step01
         if: github.event.action == 'merged'
         run: |
@@ -21,4 +22,4 @@ jobs:
           yarn env
           echo ${{ secrets.SOME_SECRET }}
  
-# some change
+# some change 3
