@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo github.event.action
-        run: echo ${{ github.event.action }}
+        run: |
+          echo "github.event: ${{ github.event }}"
+          echo "github.event.action: ${{ github.event.action }}"
       - uses: actions/checkout@v2
         if: github.event.action == 'merged'
       - name: step01
